@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post title — Krishnan Raghavan</title>
+<meta name="description" content="One-sentence description of the post for search results and link previews.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400;1,7..72,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script src="../theme.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-inner">
+    <a class="nav-mark" href="../index.html">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19 L12 5 L20 19 Z"/><path d="M12 5 L12 19"/></g><g fill="currentColor"><circle cx="4" cy="19" r="2.2"/><circle cx="12" cy="5" r="2.2"/><circle cx="20" cy="19" r="2.2"/><circle cx="12" cy="19" r="2.2"/></g></svg>
+      Krishnan Raghavan
+    </a>
+    <nav class="links" aria-label="Site">
+      <a href="../about.html">About</a>
+      <a href="../projects.html">Projects</a>
+      <a href="index.html" aria-current="page">Blog</a>
+      <a href="../services.html">Services</a>
+      <a href="../contact.html">Contact</a>
+      <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Switch theme" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></g></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="post container">
+
+    <!--
+      WRITING GUIDE (delete this comment block before publishing)
+
+      1. TITLE: state the outcome or the concrete thing that happened,
+         not the general topic. "Go image: 342MB to 37MB" beats
+         "Optimizing Docker images."
+
+      2. HOOK (first 2-3 paragraphs): say plainly where you actually
+         started, including what you didn't know. Don't perform more
+         confidence than you had going in — that's the standard you've
+         set for yourself, and it's also what makes the post credible.
+
+      3. MECHANISM: break the real content into named, causal steps
+         (not just "step 1/2/3" — name what each one *does*). Use
+         code blocks and tables where they replace a paragraph of
+         prose. Show the actual command, the actual error, the actual
+         number.
+
+      4. WHERE AI FIT IN (include this if AI was part of how you
+         solved it — it usually will be): what you asked, what you
+         got back, and critically, HOW YOU CHECKED IT before trusting
+         it. This is the section that separates "I pasted an answer"
+         from "I own this now." Don't skip the verification part.
+
+      5. CHECKLIST: the mechanical takeaway someone could use without
+         reading the rest of the post.
+
+      6. WHAT I'D TELL PAST ME: one honest paragraph. What was the
+         wrong assumption, and what's the one-sentence version of the
+         fix.
+
+      7. GO DEEPER: link primary sources you actually verified against
+         — docs, RFCs, source code — not just other blog posts.
+
+      MARKUP NOTES
+      - <pre data-lang="go"> prints a small language label above the block; drop
+        the attribute if you don't want one.
+      - Wrap wide tables in <div class="table-wrap"> so they scroll on phones
+        instead of breaking the layout.
+      - <ul class="checklist"> gets the box-in-front styling; a plain <ul> is a
+        normal list.
+      - <blockquote> can carry a <cite> for the source.
+      - Set <time datetime="YYYY-MM-DD"> to the real date; the visible text can be
+        whatever reads well.
+    -->
+
+    <header>
+      <div class="meta">
+        <time datetime="2026-11-12">12 Nov 2026</time>
+        <span>6 min read</span>
+        <ul class="tags"><li>go</li><li>docker</li></ul>
+      </div>
+      <h1>Post title goes here</h1>
+      <p class="standfirst">One sentence under the title: the concrete thing that happened, and the one idea the post is about.</p>
+    </header>
+
+    <p>Start with where you actually were before you understood this — including what you got wrong or didn't know. That's the hook.</p>
+
+    <p>Two or three short paragraphs at most. Inline code like <code>go build -ldflags="-s -w"</code> is fine here; keep longer things for a block.</p>
+
+    <h2>What actually happened</h2>
+    <p>The concrete problem, in plain terms. A number if you have one.</p>
+
+    <pre data-lang="shell"><code>$ docker images myservice
+REPOSITORY   TAG     SIZE
+myservice    latest  342MB</code></pre>
+
+    <h2>The mechanism, broken down</h2>
+    <p>Name each real step by what it does, not "step 1, step 2."</p>
+
+    <h3>Name of the first step, as a verb phrase</h3>
+    <p>What this step does and why it matters. If there's a command, show it.</p>
+
+    <pre data-lang="go"><code>// a real snippet, not a paraphrase
+package main
+
+func main() {
+	// ...
+}</code></pre>
+
+    <h3>Name of the second step</h3>
+    <p>Same again. Use a table when you're comparing two states.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Stage</th><th>Before</th><th>After</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Base image</td><td>golang:1.23</td><td>gcr.io/distroless/static</td></tr>
+          <tr><td>Image size</td><td>342MB</td><td>37MB</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <blockquote>
+      <p>A quote from the primary source you checked against, if one line of it says it better than you can.</p>
+      <cite>Name of the doc, RFC, or source file</cite>
+    </blockquote>
+
+    <h2>Where AI fit in</h2>
+    <p>What you asked, what came back, and — the part that matters — how you verified it before trusting it. Name the primary source you checked against.</p>
+
+    <div class="callout">
+      <p>Use this block for the one thing you want a skimmer to leave with. One paragraph, no heading.</p>
+    </div>
+
+    <h2>Checklist</h2>
+    <ul class="checklist">
+      <li>The mechanical takeaway, stated as an action</li>
+      <li>Another one</li>
+      <li>And the check that tells you it worked</li>
+    </ul>
+
+    <h2>What I'd tell past me</h2>
+    <p>One honest paragraph. The wrong assumption, and the one-sentence fix.</p>
+
+    <h2>Go deeper</h2>
+    <ul>
+      <li><a href="https://go.dev/doc/">Primary source you actually read</a> — one line on what it settles.</li>
+      <li>Another one</li>
+    </ul>
+
+    <nav class="post-foot" aria-label="Post navigation">
+      <a href="index.html">All posts</a>
+      <a href="https://github.com/Krishnan-Raghavan">Code on GitHub</a>
+    </nav>
+  </article>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <span>&copy; 2026 Krishnan Raghavan</span>
+    <span class="links"><a href="https://www.linkedin.com/in/krishnan-raghavan/">LinkedIn</a><a href="https://github.com/Krishnan-Raghavan">GitHub</a></span>
+    <p class="colophon">Hand-written HTML and CSS, no framework, no build step. Hosted on Cloudflare Pages.</p>
+  </div>
+</footer>
+
+</body>
+</html>
